@@ -1,0 +1,314 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  /* Header & Navigation */
+header {
+    background: #0a0a0a;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center; /* vertically centers logo and nav */
+    justify-content: space-between; /* places logo left, nav right */
+    position: relative;
+  }
+  
+  .logo img {
+    max-height: 90px; /* Adjust this value as needed for your logo size */
+    display: block;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin-left: 1.5rem;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #f39c12;
+  }
+  
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  /* Responsive Navigation */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      background: #0a0a0a;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 200px;
+      display: none;
+    }
+    nav ul.active {
+      display: block;
+    }
+    nav ul li {
+      margin: 1rem;
+    }
+    .menu-toggle {
+      display: block;
+    }
+  }
+  
+  /* Hero Section with Professional Animations */
+  .hero {
+    position: relative;
+    background: url('https://informationage-production.s3.amazonaws.com/uploads/2023/02/bolstering-cybersecurity-readiness-in-cloud-scaled.jpg') center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: backgroundZoom 20s ease-in-out infinite alternate;
+}
+
+  
+  @keyframes backgroundZoom {
+    from { transform: scale(1); }
+    to   { transform: scale(1.05); }
+  }
+  
+  /* Overlay with a smooth opacity shift */
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+    z-index: 1;
+    animation: overlayShift 8s ease-in-out infinite alternate;
+  }
+  
+  @keyframes overlayShift {
+    from { opacity: 0.7; }
+    to   { opacity: 0.5; }
+  }
+  
+  /* Hero content styles */
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 0 1rem;
+  }
+  
+  /* Title Animation */
+  .hero-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeSlide 1s forwards 0.5s;
+  }
+  
+  /* Subtitle Animation */
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlide 1s forwards 1s;
+  }
+  
+  /* Buttons Animation */
+  .hero-buttons {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlide 1s forwards 1.5s;
+  }
+  
+  /* Fade and Slide Animation */
+  @keyframes fadeSlide {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Button styling (assuming existing button styles are applied) */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #f39c12;
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin: 0.5rem;
+  }
+  .btn:hover {
+    background: #d35400;
+  }
+  
+  
+  
+  /* Sections */
+  section {
+    padding: 4rem 2rem;
+  }
+  .section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  /* Features Grid */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  .feature {
+    background: #f4f4f4;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .feature:hover {
+    transform: translateY(-5px);
+  }
+  .feature i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #f39c12;
+  }
+  .feature h3 {
+    margin-bottom: 1rem;
+  }
+  
+  /* About Section */
+  .about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+  }
+  .about img {
+    flex: 1 1 300px;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  .about-text {
+    flex: 1 1 300px;
+  }
+  
+  /* Contact Section */
+  .contact-content {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  #contact-form label {
+    text-align: left;
+    font-weight: bold;
+  }
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  #contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  .btn.secondary {
+    background: #555;
+  }
+  .btn.secondary:hover {
+    background: #333;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0,0,0,0.6);
+  }
+  .modal-content {
+    background: #fff;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+  }
+  .modal-close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Responsive Navigation */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      background: #0a0a0a;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 200px;
+      display: none;
+    }
+    nav ul.active {
+      display: block;
+    }
+    nav ul li {
+      margin: 1rem;
+    }
+    .menu-toggle {
+      display: block;
+    }
+  }
+  
+  /* Footer */
+  footer {
+    background: #0a0a0a;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CyberShieldX - Next-Gen Mobile Security</title>
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header with Logo Placeholder -->
+  <header>
+    <div class="logo">
+      <img src="Cybersheildx_logo.png" alt="CyberShieldX Logo">
+    </div>
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  
+
+<!-- Hero Section with Professional Animations -->
+<section class="hero" id="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">CyberShieldX</h1>
+      <p class="hero-subtitle">Next-Gen Mobile Security Application</p>
+      <div class="hero-buttons">
+        <a href="#features" class="btn">Discover More</a>
+        <a href="#download" class="btn download-btn">Download</a>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- Features Section -->
+  <section id="features">
+    <h2 class="section-title">Key Features</h2>
+    <div class="features-grid">
+      <div class="feature" data-title="URL Scanner" data-info="Analyze web links in real-time to detect malicious content. [Under Construction]">
+        <i class="fas fa-link"></i>
+        <h3>URL Scanner</h3>
+        <p>Analyze web links for threats.</p>
+      </div>
+      <div class="feature" data-title="Secure Proxy" data-info="Encrypt your browsing and protect your identity online. [Under Construction]">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Secure Proxy</h3>
+        <p>Encrypted browsing for privacy.</p>
+      </div>
+      <div class="feature" data-title="Threat Alerts" data-info="Receive instant notifications on emerging cyber threats. [Under Construction]">
+        <i class="fas fa-bell"></i>
+        <h3>Threat Alerts</h3>
+        <p>Get alerted on new threats.</p>
+      </div>
+      <div class="feature" data-title="Data Protection" data-info="Advanced encryption and privacy controls for your data. [Under Construction]">
+        <i class="fas fa-lock"></i>
+        <h3>Data Protection</h3>
+        <p>Keep your data secure.</p>
+      </div>
+      <div class="feature" data-title="Mobile Security" data-info="Next-level protection designed for mobile devices. [Under Construction]">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Mobile Security</h3>
+        <p>Optimized for mobile devices.</p>
+      </div>
+      <div class="feature" data-title="User-Centric Design" data-info="An intuitive interface built for every user. [Under Construction]">
+        <i class="fas fa-users"></i>
+        <h3>User-Centric Design</h3>
+        <p>Easy-to-use interface.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2 class="section-title">About CyberShieldX</h2>
+    <div class="about">
+      <img src="https://source.unsplash.com/600x400/?technology" alt="CyberShieldX Overview">
+      <div class="about-text">
+        <p>
+          CyberShieldX delivers comprehensive mobile security with a focus on user privacy and proactive threat detection.
+          Leveraging advanced technologies like AI, blockchain, and end-to-end encryption, our platform empowers you to navigate the digital world safely.
+        </p>
+        <p>
+          Our mission is to redefine mobile security by making it accessible, user-friendly, and robust – setting a new standard in cybersecurity.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap Section -->
+  <section id="roadmap">
+    <h2 class="section-title">Development Roadmap</h2>
+    <div class="features-grid">
+      <div class="feature" data-title="Q4 2024 - MVP Development" data-info="Building core features like URL Scanner and Secure Proxy. [Under Construction]">
+        <i class="fas fa-rocket"></i>
+        <h3>Q4 2024</h3>
+        <p>MVP Development</p>
+      </div>
+      <div class="feature" data-title="Q1 2025 - Beta Testing" data-info="Refining features based on real user feedback. [Under Construction]">
+        <i class="fas fa-flask"></i>
+        <h3>Q1 2025</h3>
+        <p>Beta Testing</p>
+      </div>
+      <div class="feature" data-title="Q2 2025 - Official Launch" data-info="Launching on the Play Store. [Under Construction]">
+        <i class="fas fa-store"></i>
+        <h3>Q2 2025</h3>
+        <p>Official Launch</p>
+      </div>
+      <div class="feature" data-title="Q3 2025 - Marketing & Expansion" data-info="Global outreach and continuous innovation. [Under Construction]">
+        <i class="fas fa-chart-line"></i>
+        <h3>Q3 2025</h3>
+        <p>Expansion</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section with Form -->
+  <section id="contact">
+    <h2 class="section-title">Get in Touch</h2>
+    <div class="contact-content">
+      <form id="contact-form" action="mailto:kgowham020@gmail.com" method="POST" enctype="text/plain">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+      <button id="launchBtn" class="btn secondary">Launching Soon</button>
+    </div>
+  </section>
+
+  <!-- Modal for Feature Details -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="modal-close">&times;</span>
+      <h2 id="modal-title">Feature Title</h2>
+      <p id="modal-info">Detailed information goes here.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 CyberShieldX. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
